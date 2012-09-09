@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/images/favicon.ico" rel="shortcut icon"/>
+    <link href="/styles/screen.css" media="screen" rel="stylesheet" type="text/css"/>
+    <title>Twitcoin | Your Account</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <div id="topbar">
+          <div class="container">
+            <ul>
+              <a class="site-link" title="Home" href="/">
+                <li class="bird"></li>
+                <li class="h1">Twitcoin</li>
+              </a>
+              <li id="session-menu" style="display: none">
+                <a class="user" title="" href="">
+                  <img src="">
+                  <span class="name"></span>
+                </a>
+                <div class="dropdown" hidden="hidden">
+                  <a title="Sign Out" href="/api/session">Sign Out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="welcome">
+        <div id="account-data">
+          <div id="qrcode-popup"></div>
+          <table>
+            <tr>
+              <td><b>Bitcoin Address:</b></td><td><span class="address"></span></td>
+            </tr>
+            <tr>
+              <td><b>Account Balance:</b></td><td><span class="balance"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="story">
+          <form id="send-form" method="post" action="/api/send">
+            <fieldset>
+              <input type="hidden" name="sender_account">
+              <legend>Send Bitcoins</legend>
+              <table>
+                <tr>
+                  <td><label for="receiver">Receiver:</label></td>
+                  <td><input title="Receiver" pattern="^([13]([1-9a-km-zA-HJ-Z]{24,33})|@.+)$" required="" placeholder="@twitter_name or Bitcoin Address" value="" name="receiver"></td>
+                </tr>
+                <tr>
+                  <td><label for="amount">Amount:</label></td>
+                  <td><input title="Amount" pattern="^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0-9]+(\.[0-9]*[1-9][0-9]*)?)$" required="" placeholder="Amount" value="" name="amount">&nbsp;Ƀ, plus a flat fee of 0.002 Ƀ</td>
+                </tr>
+                <tr>
+                  <td></td><td><input class="btn primary" type="submit" value="Submit"></td>
+                </tr>
+              </table>
+              <p class="message"></p>
+            </fieldset>
+          </form>
+        </div>
+        <footer>
+          <div>
+            <a href="https://twitter.com/twitcoin_net" class="twitter-follow-button" data-show-count="false">@twitcoin_net</a>
+          </div>
+          <div>
+            <a class="site-link" href="/about.html">About</a>&nbsp;
+            <a class="site-link" href="/privacy.html">Privacy</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </body>
+  <script src="/scripts/jquery-1.8.1.min.js"></script>
+  <script src="/scripts/twitcoin.js"></script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+</html>

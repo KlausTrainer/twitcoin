@@ -1,0 +1,17 @@
+config/twitcoin.config
+
+/ebin
+/doc
+/_test
+/.eunit
+/docs
+.DS_Store
+/TEST-*.xml
+*.swp
+/deps
+/log/*
+/logs
+*.beam
+priv/*.bitcask
+priv/www/static/images/qrcodes/*.png
+erl_crash.dump

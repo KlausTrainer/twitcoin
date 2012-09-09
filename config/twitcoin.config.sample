@@ -1,0 +1,32 @@
+% We prefix each configuration with `twitcoin`.
+
+{twitcoin_heart_command, "./start.sh"}. % heartbeat command
+
+{twitcoin_sasl_config, "config/elog"}.
+
+{twitcoin_ip, {127,0,0,1}}.
+{twitcoin_port, 8080}.
+
+{twitcoin_bitcoind_url, "http://127.0.0.1:8332"}.
+
+{twitcoin_bitcoind_rpc_user, "bitcoinrpc"}.
+{twitcoin_bitcoind_rpc_password, "password"}.
+
+{twitcoin_account, "twitcoin_net"}.
+
+%% For each transaction, it sends half of the transaction fee to the Twitcoin
+%% Twitter account. The other half of the fee is used for the network. That is,
+%% a quarter of `twitcoin_tx_fee` is used as a fee for the actual transaction
+%% initiated by the user, while the other quarter is used for the transaction
+%% to the `twitcoin_account`.
+{twitcoin_tx_fee, 0.002}.
+
+{twitcoin_session_timeout, 3600000}. % one hour
+{twitcoin_session_cache_size, "256MB"}.
+
+{twitcoin_twitter_consumer_key, "Mq7DXYUBYHQaXCQaSmxYbQ"}.
+{twitcoin_twitter_consumer_secret, "zNcnVNEHoqXyoAnXyVxhoH21vfLrK9SEarCJwVqK3Q"}.
+{twitcoin_twitter_oauth_callback, "https://127.0.0.1/api/twitter_sign_in"}.
+
+% {twitcoin_doc_root, "/var/www/twitcoin"}.
+% {twitcoin_db_path, "/var/lib/twitcoin/twitcoin_db.bitcask"}

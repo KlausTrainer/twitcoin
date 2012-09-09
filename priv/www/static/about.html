@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/images/favicon.ico" rel="shortcut icon"/>
+    <link href="/styles/screen.css" media="screen" rel="stylesheet" type="text/css"/>
+    <title>Twitcoin | About</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <div id="topbar">
+          <div class="container">
+            <ul>
+              <a class="site-link" title="Home" href="/">
+                <li class="bird"></li>
+                <li class="h1">Twitcoin</li>
+              </a>
+              <li id="session-menu" style="display: none">
+                <a class="user" title="" href="">
+                  <img src="">
+                  <span class="name"></span>
+                </a>
+                <div class="dropdown" hidden="hidden">
+                  <a title="Sign Out" href="/api/session">Sign Out</a>
+                </div>
+              </li>
+           </ul>
+          </div>
+        </div>
+      </header>
+      <div class="welcome">
+        <div class="story">
+          <h1>About Twitcoin</h1>
+          <p>
+            Twitcoin is an online wallet application that associates your
+            Twitter account to a personal online wallet storing bitcoins
+            (which we simply call "wallet" from now on here).
+            By crediting or rather debiting wallets, Twitcoin enables Twitter
+            account owners to both receive bitcoins from and send bitcoins to
+            any Twitter account or Bitcoin address.
+          </p>
+            Twitcoin provides a "Sign in with twitter"-functionality in order
+            to give you access to your wallet. Wallets are automatically
+            created by the Twitcoin application as necessary. That is, a wallet
+            is created when someone signs in for the first time, or when
+            someone sends bitcoins to a Twitter account that has not got a
+            wallet associated to it yet. Wallets have Bitcoin addresses and can
+            be credited by sending bitcoins to their respective address.
+          </p>
+          <p>
+            We use Twitter solely as an identity provider to manage access to
+            wallets. That is, your Twitter account credentials are only used
+            for authorizing access to your wallet, but not, for instance, to
+            access your timeline or direct messages.
+        </div>
+        <footer>
+          <div>
+            <a href="https://twitter.com/twitcoin_net" class="twitter-follow-button" data-show-count="false">@twitcoin_net</a>
+          </div>
+          <div>
+            <a class="site-link" href="/about.html">About</a>&nbsp;
+            <a class="site-link" href="/privacy.html">Privacy</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </body>
+  <script src="/scripts/jquery-1.8.1.min.js"></script>
+  <script src="/scripts/twitcoin.js"></script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+</html>

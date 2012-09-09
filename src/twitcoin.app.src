@@ -1,0 +1,8 @@
+{application, twitcoin,
+ [{description, "twitcoin"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {twitcoin_app, []}},
+  {env, []},
+  {applications, [kernel, stdlib, sasl, crypto, ibrowse]}]}.

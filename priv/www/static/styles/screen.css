@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(../fonts/Nunito-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito-Regular'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(../fonts/Nunito-Light.ttf) format('truetype');
+}
+
+body {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: #343752;
+}
+
+
+/* begin topbar */
+
+#topbar {
+  background-image: url("../images/header.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  height: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 7;
+}
+#topbar .container {
+  margin: 0 auto;
+  width: 522px;
+}
+#topbar .container ul {
+  display: inline;
+}
+#topbar .container ul > a {
+  text-decoration: none;
+}
+#topbar .container li {
+  list-style: none;
+}
+#topbar .container .bird {
+  background-image: url("../images/twitcoin-flag.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+#topbar .container .h1 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  vertical-align: top;
+  float: left;
+}
+#session-menu {
+  float: right;
+  border-radius: 2px 2px 4px 4px;
+}
+#session-menu .user {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0;
+  outline: 0 none;
+}
+#session-menu .user img {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 2px 2px 2px 2px;
+}
+
+#session-menu .user span {
+  background: url("../images/down-arrow.png") no-repeat scroll 92% center transparent;
+  padding-right: 25px;
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+}
+#session-menu .dropdown {
+  background: none repeat scroll 0 0 #dbdbdb;
+  border-radius: 0 0 5px 5px;
+  margin-top: -6px;
+  height: 30px;
+  line-height: 30px;
+  float: center;
+}
+#session-menu .dropdown a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+/* end topbar */
+
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.welcome {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0px, #dddddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0px,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0px,#dddddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0px,#dddddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0px,#dddddd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 125px rgba(255, 255, 255, 0.35);
+  margin-top: 51px;
+  width: 522px;
+  display: inline-block;
+}
+.welcome .button {
+  text-align:center;
+}
+
+.story, #account-data {
+  text-align: justify;
+  margin: 18px 18px 0 18px;
+}
+
+#account-data {
+  font-size: 16px;
+  position: relative;
+}
+#account-data a {
+  color: #4d4d4d;
+}
+#account-data .address {
+  font-size: 13px;
+}
+
+#qrcode-popup {
+  display: none;
+  position: absolute;
+  right: 18px;
+  z-index: 2;
+}
+#qrcode-popup img {
+  height: 164px;
+  width: 164px;
+  border: 1px dotted #ccc;
+  border-radius: 4px;
+}
+
+#send-form fieldset {
+  border: 0 none;
+  padding-left: 0;
+  font-size: 16px;
+}
+#send-form legend {
+  font-weight: 400;
+  font-size: 20px;
+}
+#send-form label {
+  font-weight: 400;
+}
+#send-form input {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+#send-form input[name='receiver'] {
+  width: 362px;
+}
+#send-form input[name='amount'] {
+  width: 96px;
+}
+#send-form input[type='submit'] {
+  float: right;
+  cursor: pointer;
+}
+#send-form .message.success {
+  color: green;
+}
+#send-form .message.error {
+  color: red;
+}
+
+footer {
+  margin-top: 51px;
+  margin-bottom: 11px;
+}
+footer a {
+  font-size: 13px;
+  color: #4d4d4d;
+  font-weight: 300;
+}
+
+#ribbon img {
+  width: 140px;
+}

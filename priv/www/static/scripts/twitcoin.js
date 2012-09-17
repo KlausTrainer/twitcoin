@@ -95,7 +95,7 @@ $(function() {
 
     $submit_button.click(function() {
       var send_form = $send_form.get(0),
-        message = $send_form.find(".message"),
+        $message = $send_form.find(".message"),
         sender_account = $sender_account.val(),
         receiver = $send_form.find("input[name='receiver']").val(),
         amount = parseFloat($send_form.find("input[name='amount']").val()),
@@ -104,6 +104,8 @@ $(function() {
           '"receiver":"' + receiver + '",' +
           '"amount":' + amount +
         '}';
+
+      $message.hide();
 
       if (send_form.checkValidity && !send_form.checkValidity()) {
         return true; // don't bother if data is invalid
@@ -117,8 +119,8 @@ $(function() {
         contentType: "application/json",
         data: tx_data,
         error: function(jqXHR, _status, error) {
-          message.removeClass("success").addClass("error");
-          message.hide().text("Error: " + error).fadeIn();
+          $message.removeClass("success").addClass("error");
+          $message.hide().text("Error: " + error).fadeIn();
           $submit_button.attr("disabled", false);
         },
         success: function(data) {
@@ -126,8 +128,8 @@ $(function() {
             var generic_error_msg = "There was an error. Try again after "
               + "reloading the page.";
 
-            message.removeClass("success").addClass("error");
-            message.hide().text(data.error || generic_error_msg).fadeIn();
+            $message.removeClass("success").addClass("error");
+            $message.text(data.error || generic_error_msg).fadeIn();
           } else {
             var $balance = $("#account-data .balance"),
               new_balance = $balance.data("balance") - amount - TWITCOIN_TX_FEE,
@@ -135,8 +137,8 @@ $(function() {
 
             $balance.data("balance", proper_rounded_new_balance);
             $balance.text(proper_rounded_new_balance + " Ƀ");
-            message.removeClass("error").addClass("success");
-            message.hide().text("Transaction successful.").fadeIn();
+            $message.removeClass("error").addClass("success");
+            $message.text("Transaction successful.").fadeIn();
           }
           $submit_button.attr("disabled", false);
         }

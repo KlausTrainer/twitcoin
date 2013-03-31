@@ -10,7 +10,7 @@
 -define(DEFAULT_BITCOIND_URL, "http://127.0.0.1:8332").
 -define(DEFAULT_BITCOIND_RPC_USER, "bitcoinrpc").
 -define(DEFAULT_BITCOIND_RPC_PASSWORD, "password").
--define(DEFAULT_TWITCOIN_TX_FEE, 0.002).
+-define(DEFAULT_TWITCOIN_TX_FEE, 0.001).
 -define(DEFAULT_TWITCOIN_ACCOUNT, "twitcoin_net").
 -define(DEFAULT_IP, {127,0,0,1}).
 -define(DEFAULT_PORT, 8080).

@@ -1,6 +1,6 @@
 $(function() {
 
-  var TWITCOIN_TX_FEE = 0.002;
+  var TWITCOIN_TX_FEE = 0.001;
 
   var urlParams = function() {
     var params = {};
@@ -78,7 +78,7 @@ $(function() {
 
           $balance.data("balance", data.result.balance);
 
-          $balance.hide().text(data.result.balance + " Ƀ").fadeIn();
+          $balance.hide().text(data.result.balance + " BTC").fadeIn();
           $address.hide().html(address_html).fadeIn();
 
           $address.find(".qrcode-link").click(function() {

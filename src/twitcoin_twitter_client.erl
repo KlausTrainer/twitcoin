@@ -72,7 +72,7 @@ get_access_token(Verifier, Token) ->
     | {error, term()}
     | {ok, {Name :: binary(), ProfileImgUrl :: binary()}}.
 get_user_data(Token, TokenSecret, ScreenName) ->
-    Url = "http://api.twitter.com/1/users/show.json",
+    Url = "http://api.twitter.com/1.1/users/show.json",
     Params = [{"screen_name", ScreenName}],
     gen_server:call(?MODULE, {get_user_data, Url, Params, Token, TokenSecret}, ?TIMEOUT).
 

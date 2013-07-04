@@ -16,11 +16,12 @@
 -spec start() -> ok.
 start() ->
     twitcoin_deps:ensure(),
-    ensure_started(sasl),
     ensure_started(crypto),
+    ensure_started(asn1),
     ensure_started(public_key),
     ensure_started(ssl),
     ensure_started(ibrowse),
+    ensure_started(sasl),
     application:start(twitcoin).
 
 %% @doc Start twitcoin.

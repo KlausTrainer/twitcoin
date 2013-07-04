@@ -5,4 +5,14 @@
   {registered, []},
   {mod, {twitcoin_app, []}},
   {env, []},
-  {applications, [kernel, stdlib, sasl, crypto, ibrowse]}]}.
+  {applications, [
+      kernel,
+      stdlib,
+      sasl,
+      crypto,
+      asn1,
+      public_key,
+      ssl,
+      ibrowse
+  ]}
+]}.
